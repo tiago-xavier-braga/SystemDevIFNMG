@@ -13,8 +13,9 @@
     ?>
     <main>
         <div class="contentLink">
-            <a href="./public/templates/listUser.php">List Users</a>
-            <a href="./public/templates/formUser.php">Form User</a>
+            <a href="./public/templates/adminPage.php">Admin List Page</a>
+            <a href="./public/templates/forms/formProject.php">Form Project</a>
+            <a href="./public/templates/forms/formDev.php">Form Dev</a>
         </div>
     </main>
 </body>
