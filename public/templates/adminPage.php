@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../css/base/header.css">
-    <link rel="stylesheet" href="../css/listUser.css">
+    <link rel="stylesheet" href="../css/adminPage.css">
     <title>Document</title>
 </head>
 <body>
@@ -16,7 +16,7 @@
         <?php
             require_once '../../class/rb-mysql.php';
     
-            $conn = R::setup( 'mysql:host=localhost;dbname=SYSTEM_A', 'root', 'aluno' );
+            $conn = R::setup( 'mysql:host=localhost;dbname=SYSTEM_DEV', 'root', '' );
 
             if ($conn) {
                 # code...
@@ -29,14 +29,29 @@
             <tr>
                 <th>Id</th>
                 <th>Name</th>
+                <th>Level</th>
+                <th>Option</th>
             </tr>
 
         <?php
-            $userDB = R::findAll('user');
+            $devDB = R::findAll('developer');
 
-            foreach ($userDB as $value) {
+        $devHTML = <<<DEV
+        <tr>
+            <td>%d</td>
+            <td><p>%s</p></td>
+            <td>%s</td>
+            <td>
+                <a href='detailDev.php?id=%d'>Detail</a>
+                <a href='deleteDev.php?id=%d'>Delete</a>
+                <a href='editDev.php?id=%d'>Edit</a>
+            </td>
+        </tr>
+DEV;
+
+            foreach ($devDB as $value) {
                 # code...
-                echo "<tr><td>{$value->id}</td><td><a href='detailUser.php?id={$value->id}'>$value->name</a></td></tr>";
+                printf($devHTML, $value->id, $value->name, $value->level, $value->id, $value->id, $value->id);
             }
         ?> 
         </table>

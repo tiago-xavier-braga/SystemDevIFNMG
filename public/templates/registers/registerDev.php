@@ -46,10 +46,8 @@
         $idArray = R::store($developer);
 
         echo "<p>ID: $idArray</p>";
-
-        echo "<a href='listUser.php?id={$idArray}'>List Users</a>";
     ?>
-        <h2>User register</h2>
+        <h2>Developer register</h2>
     </main>
     <footer>
         <p>Tiago Braga TXB</p>
