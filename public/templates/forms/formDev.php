@@ -15,8 +15,14 @@
         <h1>Register Dev Form</h1>
         <form action="../registers/registerDev.php" method="get">
             <div class="contentForm">
-                <input type="text" name="name" id="name" placeholder="User Name">
-                <input type="email" name="email" id="email" placeholder="Email">
+                <input type="text" name="name" id="name" placeholder="Dev Name">
+                <label for="birth">Date of Birth:</label>
+                <input type="date" name="birth" placeholder="Date of Birth">
+                <input type="text" name="level" id="level">
+                <input type="email" name="email" id="email">
+                <input type="password" name="password" id="password">
+                <input type="checkbox" name="active" id="active">
+                <input type="checkbox" name="admin" id="admin">
                 <button type="submit">Send</button>
             </div>
         </form>

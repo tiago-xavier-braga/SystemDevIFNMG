@@ -15,7 +15,7 @@
     <?php 
         require_once '../../../class/rb-mysql.php';
     
-        $conn = R::setup( 'mysql:host=localhost;dbname=SYSTEM_DEV', 'root', 'aluno' );
+        $conn = R::setup( 'mysql:host=localhost;dbname=SYSTEM_DEV', 'root', '' );
 
         if ($conn) {
             # code...
