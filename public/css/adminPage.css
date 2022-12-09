@@ -2,14 +2,21 @@ table {
     font-family: arial, sans-serif;
     border-collapse: collapse;
     width: 40%;
-  }
-  
-  td, th {
-    border: 1px solid #dddddd;
-    text-align: left;
-    padding: 8px;
-  }
-  
-  tr:nth-child(even) {
-    background-color: #dddddd;
-  }
+}
+td, th {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 8px;
+}
+.icon-action{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  align-items: center;
+  justify-content: center;
+}
+.icon-action a{
+  color: #000;
+}
+tr:nth-child(even) {
+  background-color: #dddddd;
+}

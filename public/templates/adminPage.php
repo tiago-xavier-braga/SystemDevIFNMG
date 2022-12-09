@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../css/base/header.css">
     <link rel="stylesheet" href="../css/adminPage.css">
+    <script src="https://kit.fontawesome.com/8ceb46e887.js" crossorigin="anonymous"></script>
     <title>Document</title>
 </head>
 <body>
@@ -41,10 +42,10 @@
             <td>%d</td>
             <td><p>%s</p></td>
             <td>%s</td>
-            <td>
-                <a href='detailDev.php?id=%d'>Detail</a>
-                <a href='deleteDev.php?id=%d'>Delete</a>
-                <a href='editDev.php?id=%d'>Edit</a>
+            <td class="icon-action">
+                <a href='detailDev.php?id=%d'><p><i class="fa-solid fa-circle-info"></i></p></a>
+                <a href='deleteDev.php?id=%d'><p><i class="fa-solid fa-trash"></i></p></a>
+                <a href='editDev.php?id=%d'><p><i class="fa-solid fa-pen-to-square"></i></p></a>
             </td>
         </tr>
 DEV;
