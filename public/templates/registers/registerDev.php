@@ -23,13 +23,27 @@
         } else {
             echo '<script>console.log("Failed connection database"</script>';
         }
-        if (isset($_GET['name']) && isset($_GET['email'])) {
-            $user = R::dispense('user');
-            $user->name = $_GET['name'];
-            $user->email = $_GET['email'];
+        if (isset($_GET['name']) && isset($_GET['birth']) && isset($_GET['level']) && isset($_GET['email']) && isset($_GET['password'])) {
+            $developer = R::dispense('developer');
+            $developer->name = $_GET['name'];
+            $developer->birth = $_GET['birth'];
+            $developer->level = $_GET['level'];
+            $developer->email = $_GET['email'];
+            $developer->password = $_GET['password'];
+            if(isset($_GET['active'])){
+                $developer->active = true;
+            } else {
+                $developer->active = false;
+            }
+            if(isset($_GET['admin'])){
+                $developer->admin = true;
+            } else {
+                $developer->admin = false;
+            }
         }
 
-        $idArray = R::store($user);
+
+        $idArray = R::store($developer);
 
         echo "<p>ID: $idArray</p>";
 
