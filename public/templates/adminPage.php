@@ -43,9 +43,9 @@
             <td><p>%s</p></td>
             <td>%s</td>
             <td class="icon-action">
-                <a href='detailDev.php?id=%d'><p><i class="fa-solid fa-circle-info"></i></p></a>
-                <a href='deleteDev.php?id=%d'><p><i class="fa-solid fa-trash"></i></p></a>
-                <a href='editDev.php?id=%d'><p><i class="fa-solid fa-pen-to-square"></i></p></a>
+                <a href='details/detailDev.php?id=%d'><p><i class="fa-solid fa-circle-info"></i></p></a>
+                <a href='delete/deleteDev.php?id=%d'><p><i class="fa-solid fa-trash"></i></p></a>
+                <a href='details/editDev.php?id=%d'><p><i class="fa-solid fa-pen-to-square"></i></p></a>
             </td>
         </tr>
 DEV;
@@ -73,8 +73,8 @@ DEV;
             <td><p>%s</p></td>
             <td>%s</td>
             <td class="icon-action">
-                <a href='detailProject.php?id=%d'><p><i class="fa-solid fa-circle-info"></i></p></a>
-                <a href='deleteProject.php?id=%d'><p><i class="fa-solid fa-trash"></i></p></a>
+                <a href='details/detailProject.php?id=%d'><p><i class="fa-solid fa-circle-info"></i></p></a>
+                <a href='delete/deleteProject.php?id=%d'><p><i class="fa-solid fa-trash"></i></p></a>
                 <a href='editProject.php?id=%d'><p><i class="fa-solid fa-pen-to-square"></i></p></a>
             </td>
         </tr>
@@ -82,7 +82,7 @@ PROJECT;
 
             foreach ($projectDB as $value) {
                 # code...
-                printf($devHTML, $value->id, $value->name, $value->conclusionPlanned, $value->id, $value->id, $value->id);
+                printf($projectHTML, $value->id, $value->name, $value->conclusionPlanned, $value->id, $value->id, $value->id);
             }
         ?> 
         </table>

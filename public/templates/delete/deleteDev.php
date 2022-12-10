@@ -1,21 +1,21 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../../css/base/header.css">
-    <title>Document</title>
+    <title>Delete Student</title>
 </head>
+
 <body>
-<?php
+    <?php
         require_once '../base/header.php';
     ?>
     <main>
         <?php
             require_once '../../../class/rb-mysql.php';
-    
-            $conn = R::setup( 'mysql:host=localhost;dbname=SYSTEM_DEV', 'root', '' );
+            $conn = R::setup('mysql:host=localhost;dbname=SYSTEM_DEV', 'root', '');
 
             if ($conn) {
                 # code...
@@ -25,18 +25,14 @@
             }
 
             if (isset($_GET['id'])) {
-                $developerDB = R::load('developer', $_GET['id']);
-                echo "<h1>{$developerDB->name}</h1>";
-                echo "<p>{$developerDB->id}</p>";
-                echo "<p>{$developerDB->birth}</p>";
-                echo "<p>{$developerDB->level}</p>";
-                echo "<p>{$developerDB->email}</p>";
-                echo "<p>{$developerDB->password}</p>";
-                echo "<p>{$developerDB->email}</p>";
+                $id = $_GET['id'];
+                $developerDelete = R::load('developer', $id);            
+                R::trash($developerDelete);
 
+                echo "<h1>Developer Deleted !</h1>";
             }
         ?>
-        
     </main>
 </body>
+
 </html>

@@ -15,7 +15,7 @@
         <?php
             require_once '../../../class/rb-mysql.php';
     
-            $conn = R::setup( 'mysql:host=localhost;dbname=SYSTEM_DEV', 'root', 'aluno' );
+            $conn = R::setup( 'mysql:host=localhost;dbname=SYSTEM_DEV', 'root', '' );
 
             if ($conn) {
                 # code...
@@ -25,11 +25,13 @@
             }
 
             if (isset($_GET['id'])) {
-                $userDB = R::load('user', $_GET['id']);
+                $productDB = R::load('product', $_GET['id']);
 
-                echo "<p>{$userDB->id}</p>";
-                echo "<p>{$userDB->name}</p>";
-                echo "<p>{$userDB->email}</p>";
+                echo "<p>{$productDB->id}</p>";
+                echo "<p>{$productDB->name}</p>";
+                echo "<p>{$productDB->startDate}</p>";
+                echo "<p>{$productDB->conclusionPlanned}</p>";
+                echo "<p>{$productDB->conclusion}</p>";
             }
         ?>
         
