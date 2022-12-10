@@ -14,47 +14,38 @@
         require_once '../base/header.php';
     ?>
     <main>
-        <form action="../registers/registerDev.php" method="get">
+        <form action="../registers/registerProject.php" method="get">
             <div class="container">
                 <div class="boxTitle divDefault">
-                    <h1>Register <e class="boldWord">Dev Project</e></h1>
+                    <h1>Register <e class="boldWord">Project Form</e></h1>
                 </div>
-
                 <div class="boxInput divDefault">
                     <div class="inputConfig divDefault">
-                        <p>Developer</p>
+                        <p>Project</p>
                         <div class="inputLine" id="inputLineUser">
-                            <input type="text" name="name" id="name" placeholder="testuser">
+                            <input type="text" name="name" id="name" placeholder="Name">
                             <p><i class="fa-solid fa-user"></i></p>
                         </div>
                     </div>
                     <div class="inputConfig divDefault">
-                        <p>Date of Birth</p>
+                        <p>Start Date</p>
                         <div class="inputLine">
-                            <input type="date" name="birth" placeholder="Date of Birth">
+                            <input type="date" name="startDate">
                             <p><i class="fa-solid fa-calendar-days"></i></p>
                         </div>
                     </div>
                     <div class="inputConfig divDefault">
-                        <p>Level</p>
+                        <p>Conclusion Planned Date</p>
                         <div class="inputLine">
-                            <input type="text" name="level" id="level" placeholder="Level">
-                            <p><i class="fa-solid fa-filter"></i></p>
+                            <input type="date" name="conclusionPlanned">
+                            <p><i class="fa-solid fa-calendar-days"></i></p>
                         </div>
                     </div>
                     <div class="inputConfig divDefault">
-                        <p>Email</p>
+                        <p>Conclusion Date</p>
                         <div class="inputLine">
-                            <input type="email" name="email" id="email" placeholder="Email" maxlength="250">
-                            <p><i class="fa-solid fa-envelope"></i></p>
-                        </div>
-                    </div>
-                    <div class="inputConfig divDefault">
-                        <p>Password</p>
-                        <div class="inputLine" id="inputLinePassword">
-                        <input type="text" name="password" id="password" placeholder="Password" maxlength="64">
-                            <p onclick="viewPassword()"><i id="eye"class="fa-solid fa-eye-slash"></i></p>
-                            <!--<i class="fa-solid fa-eye"></i>-->
+                            <input type="date" name="conclusion">
+                            <p><i class="fa-solid fa-calendar-days"></i></p>
                         </div>
                     </div>
                 </div>

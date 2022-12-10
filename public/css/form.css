@@ -1,6 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;500;700&display=swap');
 :root{
     --blue-color: #0078F0;
+    --blue-color-hover: #0364c5;
     --font-color: #333;
     --bg-main: #f0f8ff;
     --bg-container: #fff;
@@ -104,6 +105,10 @@ form{
 }
 .login{
     background-color: var(--blue-color);
+}
+.login:hover{
+    transition: 0.5s;
+    background-color: var(--blue-color-hover);
 }
 .cancel{
     background-color: var(--bg-cancel);

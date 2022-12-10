@@ -23,13 +23,15 @@
         } else {
             echo '<script>console.log("Failed connection database"</script>';
         }
-        if (isset($_GET['name']) && isset($_GET['email'])) {
-            $user = R::dispense('user');
-            $user->name = $_GET['name'];
-            $user->email = $_GET['email'];
+        if (isset($_GET['name']) && isset($_GET['startDate']) && isset($_GET['conclusionPlanned']) && isset($_GET['conclusion'])) {
+            $project = R::dispense('project');
+            $project->name = $_GET['name'];
+            $project->startDate = $_GET['startDate'];
+            $project->conclusionPlanned = $_GET['conclusionPlanned'];
+            $project->conclusion = $_GET['conclusion'];
         }
 
-        $idArray = R::store($user);
+        $idArray = R::store($project);
 
         echo "<p>ID: $idArray</p>";
 

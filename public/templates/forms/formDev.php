@@ -24,7 +24,7 @@
                     <div class="inputConfig divDefault">
                         <p>Developer</p>
                         <div class="inputLine" id="inputLineUser">
-                            <input type="text" name="name" id="name" placeholder="testuser">
+                            <input type="text" name="name" id="name" placeholder="name">
                             <p><i class="fa-solid fa-user"></i></p>
                         </div>
                     </div>

@@ -56,6 +56,36 @@ DEV;
             }
         ?> 
         </table>
+        <table>
+            <tr>
+                <th>Id</th>
+                <th>Name</th>
+                <th>Conclusion Planned</th>
+                <th>Option</th>
+            </tr>
+
+        <?php
+            $projectDB = R::findAll('project');
+
+        $projectHTML = <<<PROJECT
+        <tr>
+            <td>%d</td>
+            <td><p>%s</p></td>
+            <td>%s</td>
+            <td class="icon-action">
+                <a href='detailProject.php?id=%d'><p><i class="fa-solid fa-circle-info"></i></p></a>
+                <a href='deleteProject.php?id=%d'><p><i class="fa-solid fa-trash"></i></p></a>
+                <a href='editProject.php?id=%d'><p><i class="fa-solid fa-pen-to-square"></i></p></a>
+            </td>
+        </tr>
+PROJECT;
+
+            foreach ($projectDB as $value) {
+                # code...
+                printf($devHTML, $value->id, $value->name, $value->conclusionPlanned, $value->id, $value->id, $value->id);
+            }
+        ?> 
+        </table>
     </main>
 </body>
 </html>
