@@ -25,16 +25,15 @@
             }
 
             if (isset($_GET['id'])) {
-                $productDB = R::load('product', $_GET['id']);
+                $projectDB = R::load('project', $_GET['id']);
 
-                echo "<p>{$productDB->id}</p>";
-                echo "<p>{$productDB->name}</p>";
-                echo "<p>{$productDB->startDate}</p>";
-                echo "<p>{$productDB->conclusionPlanned}</p>";
-                echo "<p>{$productDB->conclusion}</p>";
+                echo "<p>{$projectDB->id}</p>";
+                echo "<p>{$projectDB->name}</p>";
+                echo "<p>{$projectDB->startDate}</p>";
+                echo "<p>{$projectDB->conclusionPlanned}</p>";
+                echo "<p>{$projectDB->conclusion}</p>";
             }
         ?>
-        
     </main>
 </body>
 </html>
