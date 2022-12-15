@@ -5,9 +5,10 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../css/base/header.css">
+    <link rel="stylesheet" href="../css/base/footer.css">
     <link rel="stylesheet" href="../css/adminPage.css">
     <script src="https://kit.fontawesome.com/8ceb46e887.js" crossorigin="anonymous"></script>
-    <title>Document</title>
+    <title>Admin Page</title>
 </head>
 <body>
     <?php
@@ -25,7 +26,8 @@
             } else {
                 echo '<script>console.log("Failed connection database"</script>';
             }
-        ?>   
+        ?>
+        <h1>Developers</h1>
         <table>
             <tr>
                 <th>Id</th>
@@ -56,6 +58,7 @@ DEV;
             }
         ?> 
         </table>
+        <h1>Projects</h1>
         <table>
             <tr>
                 <th>Id</th>
@@ -87,5 +90,8 @@ PROJECT;
         ?> 
         </table>
     </main>
+    <?php
+        require_once './base/footer.php';
+    ?>
 </body>
 </html>

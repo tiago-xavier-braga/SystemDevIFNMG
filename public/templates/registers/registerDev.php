@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../../css/base/header.css">
+    <link rel="stylesheet" href="../../css/base/footer.css">
     <title>System_A</title>
 </head>
 <body>
@@ -31,14 +32,14 @@
             $developer->email = $_GET['email'];
             $developer->password = $_GET['password'];
             if(isset($_GET['active'])){
-                $developer->active = true;
+                $developer->active = "true";
             } else {
-                $developer->active = false;
+                $developer->active = "false";
             }
             if(isset($_GET['admin'])){
-                $developer->admin = true;
+                $developer->admin = "true";
             } else {
-                $developer->admin = false;
+                $developer->admin = "false";
             }
         }
 
@@ -49,8 +50,8 @@
     ?>
         <h2>Developer register</h2>
     </main>
-    <footer>
-        <p>Tiago Braga TXB</p>
-    </footer>
+    <?php
+        require_once '../base/footer.php';
+    ?>
 </body>
 </html>

@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../../css/base/header.css">
+    <link rel="stylesheet" href="../../css/base/footer.css">
     <link rel="stylesheet" href="../../css/form.css">
     <script src="https://kit.fontawesome.com/8ceb46e887.js" crossorigin="anonymous"></script>
     <title>Register Project</title>
@@ -55,5 +56,8 @@
             </div>
         </form>
     </main>
+    <?php
+        require_once '../base/footer.php';
+    ?>
 </body>
 </html>
