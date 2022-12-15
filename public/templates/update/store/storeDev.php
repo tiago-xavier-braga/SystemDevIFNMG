@@ -4,16 +4,16 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../../css/base/header.css">
+    <link rel="stylesheet" href="../../../css/base/header.css">
     <title>System_A</title>
 </head>
 <body>
     <?php
-        require_once '../base/header.php';
+        require_once '../../base/header.php';
     ?>
     <main>
-    <?php 
-        require_once '../../../class/rb-mysql.php';
+        <?php
+            require_once '../../../../class/rb-mysql.php';
     
         $conn = R::setup( 'mysql:host=localhost;dbname=SYSTEM_DEV', 'root', '' );
 
@@ -24,7 +24,7 @@
             echo '<script>console.log("Failed connection database"</script>';
         }
         if (isset($_GET['name']) && isset($_GET['birth']) && isset($_GET['level']) && isset($_GET['email']) && isset($_GET['password'])) {
-            $developer = R::dispense('developer');
+            $developer = R::load('developer', $_GET['id']);
             $developer->name = $_GET['name'];
             $developer->birth = $_GET['birth'];
             $developer->level = $_GET['level'];

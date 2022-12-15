@@ -9,11 +9,11 @@
 </head>
 <body>
     <?php
-        require_once '../base/header.php';
+        require_once '../../base/header.php';
     ?>
     <main>
-    <?php 
-        require_once '../../../class/rb-mysql.php';
+        <?php
+            require_once '../../../../class/rb-mysql.php';
     
         $conn = R::setup( 'mysql:host=localhost;dbname=SYSTEM_DEV', 'root', '' );
 
@@ -24,7 +24,7 @@
             echo '<script>console.log("Failed connection database"</script>';
         }
         if (isset($_GET['name']) && isset($_GET['startDate']) && isset($_GET['conclusionPlanned']) && isset($_GET['conclusion'])) {
-            $project = R::dispense('project');
+            $project = R::load('project', $_GET['id']);
             $project->name = $_GET['name'];
             $project->startDate = $_GET['startDate'];
             $project->conclusionPlanned = $_GET['conclusionPlanned'];

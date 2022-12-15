@@ -19,7 +19,6 @@
                 <div class="boxTitle divDefault">
                     <h1>Register <e class="boldWord">Dev Form</e></h1>
                 </div>
-
                 <div class="boxInput divDefault">
                     <div class="inputConfig divDefault">
                         <p>Developer</p>
@@ -55,6 +54,16 @@
                         <input type="text" name="password" id="password" placeholder="Password" maxlength="64">
                             <p onclick="viewPassword()"><i id="eye"class="fa-solid fa-eye-slash"></i></p>
                             <!--<i class="fa-solid fa-eye"></i>-->
+                        </div>
+                    </div>
+                    <div class="checkboxContainer">
+                        <div>
+                            <label for="active">Active:</label>
+                            <input type="checkbox" name="active">
+                        </div>
+                        <div>
+                            <label for="admin">Manager:</label>
+                            <input type="checkbox" name="admin">
                         </div>
                     </div>
                 </div>

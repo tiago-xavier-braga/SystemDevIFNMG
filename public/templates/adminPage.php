@@ -45,7 +45,7 @@
             <td class="icon-action">
                 <a href='details/detailDev.php?id=%d'><p><i class="fa-solid fa-circle-info"></i></p></a>
                 <a href='delete/deleteDev.php?id=%d'><p><i class="fa-solid fa-trash"></i></p></a>
-                <a href='update/updateDev.php?id=%d'><p><i class="fa-solid fa-pen-to-square"></i></p></a>
+                <a href='update/edit/updateDev.php?id=%d'><p><i class="fa-solid fa-pen-to-square"></i></p></a>
             </td>
         </tr>
 DEV;
@@ -75,7 +75,7 @@ DEV;
             <td class="icon-action">
                 <a href='details/detailProject.php?id=%d'><p><i class="fa-solid fa-circle-info"></i></p></a>
                 <a href='delete/deleteProject.php?id=%d'><p><i class="fa-solid fa-trash"></i></p></a>
-                <a href='update/updateProject.php?id=%d'><p><i class="fa-solid fa-pen-to-square"></i></p></a>
+                <a href='update/edit/updateProject.php?id=%d'><p><i class="fa-solid fa-pen-to-square"></i></p></a>
             </td>
         </tr>
 PROJECT;
