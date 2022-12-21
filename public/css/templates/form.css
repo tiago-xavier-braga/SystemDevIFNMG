@@ -33,7 +33,7 @@ form{
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    height: 90vh;
+    min-height: 60vh;
     width: 90%;
     border-radius: 10px;
     box-shadow: 1px 1px 12px 7px var(--bd-shadow);
@@ -114,6 +114,7 @@ form{
 }
 .login{
     background-color: var(--blue-color);
+    margin-bottom: 1rem;
 }
 .login:hover{
     transition: 0.5s;
