@@ -26,19 +26,19 @@
             } else {
                 echo '<script>console.log("Failed connection database"</script>';
             }
-
             if (isset($_GET['id'])) {
-                $developerDB = R::load('developer', $_GET['id']);
+                $id = (int) $_GET['id'];
+                list($developerDB, $credentialDB) = R::loadMulti('developer,credential', $id);
                 echo "<h1>Name: {$developerDB->name}</h1>";
                 echo "<p>ID: {$developerDB->id}</p>";
                 echo "<p>Date of Birth: {$developerDB->birth}</p>";
                 echo "<p>Level: {$developerDB->level}</p>";
-                echo "<p>Email: {$developerDB->email}</p>";
-                echo "<p>Password: {$developerDB->password}</p>";
-                if($developerDB->active == "1"){
+                echo "<p>Email: {$credentialDB->email}</p>";
+                echo "<p>Password: {$credentialDB->password}</p>";
+                if($credentialDB->active == "1"){
                     echo "<p>Active</p>";
                 }
-                if($developerDB->admin == "1"){
+                if($credentialDB->admin == "1"){
                     echo "<p>Manager</p>";
                 }
             }

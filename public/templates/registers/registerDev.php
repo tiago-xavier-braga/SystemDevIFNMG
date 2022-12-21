@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../../css/base/header.css">
     <link rel="stylesheet" href="../../css/base/footer.css">
+    <link rel="stylesheet" href="../../css/templates/register.css">
     <title>System_A</title>
 </head>
 <body>
@@ -24,31 +25,34 @@
         } else {
             echo '<script>console.log("Failed connection database"</script>';
         }
-        if (isset($_GET['name']) && isset($_GET['birth']) && isset($_GET['level']) && isset($_GET['email']) && isset($_GET['password'])) {
+        if (isset($_GET['name']) && isset($_GET['birth']) && isset($_GET['level'])) {
             $developer = R::dispense('developer');
             $developer->name = $_GET['name'];
             $developer->birth = $_GET['birth'];
             $developer->level = $_GET['level'];
-            $developer->email = $_GET['email'];
-            $developer->password = $_GET['password'];
+        }
+        $idDeveloper = R::store($developer);
+
+        if(isset($_GET['email']) && isset($_GET['password'])){
+            $credential = R::dispense('credential');
+            $credential->email = $_GET['email'];
+            $credential->password = $_GET['password'];
             if(isset($_GET['active'])){
-                $developer->active = "true";
+                $credential->active = "true";
             } else {
-                $developer->active = "false";
+                $credential->active = "false";
             }
             if(isset($_GET['admin'])){
-                $developer->admin = "true";
+                $credential->admin = "true";
             } else {
-                $developer->admin = "false";
+                $credential->admin = "false";
             }
+
+            $credential->developer = $developer;
         }
-
-
-        $idArray = R::store($developer);
-
-        echo "<p>ID: $idArray</p>";
+        $idCredential = R::store($credential);
     ?>
-        <h2>Developer register</h2>
+        <h2>Developer registered</h2>
     </main>
     <?php
         require_once '../base/footer.php';

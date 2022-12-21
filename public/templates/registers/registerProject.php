@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../../css/base/header.css">
     <link rel="stylesheet" href="../../css/base/footer.css">
+    <link rel="stylesheet" href="../../css/templates/register.css">
     <title>System_A</title>
 </head>
 <body>
@@ -38,7 +39,7 @@
 
         echo "<a href='listUser.php?id={$idArray}'>List Users</a>";
     ?>
-        <h2>User register</h2>
+        <h2>User registered</h2>
     </main>
     <?php
         require_once '../base/footer.php';
